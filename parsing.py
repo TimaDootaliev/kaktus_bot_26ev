@@ -34,8 +34,7 @@ def parse_data(cards: ResultSet) -> list:
         obj = {
             'title': card.find('a' , class_='ArticleItem--name').text,
             'photo': card.find('img', class_='ArticleItem--image-img').get('src'),
-            'news_link': news_link,
-            'description': get_description(news_link),
+            'news_link': news_link
         }
         news.append(obj)
     return news
